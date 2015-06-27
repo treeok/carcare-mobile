@@ -1,0 +1,99 @@
+doctype html
+html
+   head
+      title 登录
+      meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1")
+      include include/loads.jade
+      //script(src="./script/include/index.js")
+   body
+      div(data-role="page" id="login")
+         include include/header.jade
+         a.title( data-corners="false" style="font-size: 20px;padding: .7em 0;display: block;position: relative;text-align: center;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;") 登录
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#login-tel.input-text(placeholder="请输入手机号" type="text" data-corners="false" data-enhanced="true")
+               p.tips-container 手机号格式不正确
+               p.tips-container 手机号不能为空
+               p.tips-container 手机号不正确
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#login-pwd.input-text(placeholder="请输入密码" type="password" data-corners="false" data-enhanced="true")
+               p.tips-container 密码不正确
+               p.tips-container 密码不能为空
+               a(href="#resetpwd1" data-inline="true" style="text-decoration: none;font-weight:normal;font-size:14px;display: block;position: absolute;right: 0;color:#5a5a5a;") 忘记密码？
+            div(data-role="fieldcontain" style="margin-top:15px;")
+               a#login-btn.btn-primary(data-role="button"  data-corners="false") 登录
+               a.btn-default(data-role="button"  data-corners="false" href="#register") 马上注册
+         include include/footer.jade
+      div(data-role="page" id="register")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 注册
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#register-tel.input-text(placeholder="请输入手机号" type="text" data-corners="false" data-enhanced="true")
+               p.tips-container 手机号不能为空
+               p.tips-container 手机号已注册
+               p.tips-container 手机号格式不正确
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#register-code.input-text(placeholder="请输入收到的验证码" type="text" data-corners="false" data-enhanced="true")
+               p.tips-container 验证码不能为空
+               p.tips-container 验证码不正确
+               p.tips-container 验证码失效
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#register-pwd.input-text(placeholder="至少包含数字、字母、字符两种，长度8~16位" type="password" data-corners="false" data-enhanced="true")
+               p.tips-container 密码长度8~16位，数字、字母、字符至少包含两种
+               p.tips-container 密码不能为空
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#register-confirm-pwd.input-text(placeholder="确认密码" type="password" data-corners="false" data-enhanced="true")
+               p.tips-container 确认密码不能为空
+               p.tips-container 两次输入密码不相同
+            div(data-role="fieldcontain" style="margin-top:15px;border-bottom:none;")
+               a.btn-primary(data-role="button"  data-corners="false") 马上注册
+            p(style="font-size:12px;") 注：
+            p(style="font-size:12px;") 点击“马上注册”，即表示您同意并愿意遵守车挣用户协议和隐私政策
+         include include/footer.jade
+      div(data-role="page" id="resetpwd1")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 忘记密码
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#resetpwd1-tel.input-text(placeholder="请输入手机号" type="text" data-corners="false" data-enhanced="true")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset(style="width:60%;display:inline-block;")
+                  input#resetpwd1-code.input-text(placeholder="请输入验证码" type="text" data-corners="false" data-enhanced="true")
+               div(style="width:35%;display:inline-block;")
+                  img
+            div(data-role="fieldcontain" style="margin-top:15px;border-bottom:none;")
+               a.btn-primary(data-role="button"  data-corners="false") 下一步
+         include include/footer.jade
+      div(data-role="page" id="resetpwd2")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 忘记密码
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#resetpwd2-code.input-text(placeholder="请输入收到的验证码" type="text" data-corners="false" data-enhanced="true")
+               p.tips-container 验证码不能为空
+               p.tips-container 验证码不正确
+               p.tips-container 验证码失效
+            div(data-role="fieldcontain" style="margin-top:15px;border-bottom:none;")
+               a.btn-primary(data-role="button"  data-corners="false") 下一步
+         include include/footer.jade
+      div(data-role="page" id="resetpwd3")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 忘记密码
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#resetpwd3-pwd.input-text(placeholder="至少包含数字、字母、字符两种，长度8~16位" type="password" data-corners="false" data-enhanced="true")
+               p.tips-container 密码长度8~16位，数字、字母、字符至少包含两种
+               p.tips-container 密码不能为空
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset
+                  input#resetpwd3-confirm-pwd.input-text(placeholder="确认密码" type="password" data-corners="false" data-enhanced="true")
+               p.tips-container 确认密码不能为空
+               p.tips-container 两次输入密码不相同
+            div(data-role="fieldcontain" style="margin-top:15px;border-bottom:none;")
+               a.btn-primary(data-role="button"  data-corners="false") 确定
+         include include/footer.jade

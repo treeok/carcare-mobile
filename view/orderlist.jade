@@ -1,0 +1,41 @@
+doctype html
+html
+   head
+      title 个人中心
+      meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1")
+      include include/loads.jade
+   body
+      div(data-role="page" id="orderlist")
+         include include/header.jade
+         a.title( data-corners="false" style="font-size: 20px;padding: .7em 0;display: block;position: relative;text-align: center;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;") 个人中心
+         div(data-role="content")
+            div(style="border-bottom:1px solid #dcdcdc;padding-bottom:10px;")
+              img(src="./img/user-info.png")
+              span(style="font-size:20px;margin-left:10px;display:inline-block;height:25px;line-height:25px;") 15618735062
+            div(style="background: url('./img/order-bg.png') no-repeat left #fff;height:90px;margin-top:30px;border:1px solid #37bdd6;border-left:none;")
+               div(style="margin:15px 15px;position:relative;")
+                  img(src="./img/box.png")
+                  div(style="display:inline-block;height:60px;")
+                     p(style="margin:0;font-size:14px;color:#37bdd6;") 订单日期:
+                     p(style="margin:0;font-size:12px;") 订单编号:
+                     p(style="margin:0;font-size:12px;") 订单总价: 297元
+                  a(style="position:absolute;height: 30px;width: 74px;top:15px;right:0;display:block;background:url('./img/arrow-r.png') no-repeat right;" href="#order-info") 未付款
+      div(data-role="page" id="order-info")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 收货地址
+         div(data-role="content")
+            div(data-role="ui-field-contain" style="border-bottom:none;")
+            label(for="name") 收件人
+            input#name(name="name" data-corners="false" type="text" placeholder="请输入收件人的姓名")
+            label(for="tel") 联系方式
+            input#code(name="tel" data-corners="false" type="text" placeholder="请输入收件人手机号")
+            label(for="address") 收货地址
+            select#province(name="province" data-corners="false")
+            select#city(name="city" data-corners="false")
+            select#county(name="county" data-corners="false")
+            textarea(rows="20" name="detail-address" id="detail-address" placeholder="请输入详细地址")
+            div(data-role="ui-field-contain" style="margin-top:30px;")
+               a.btn-primary(data-role="button"  data-corners="false") 保存
+
+

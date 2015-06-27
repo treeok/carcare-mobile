@@ -1,0 +1,36 @@
+doctype html
+html
+   head
+      title 客户预约
+      meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1")
+      include include/loads.jade
+   body
+      div(data-role="page" id="subscribe")
+         include include/header.jade
+         a.title( data-corners="false" style="font-size: 18px;padding: .7em 1em;display: block;position: relative;text-align: center;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;") 客户预约
+         div(data-role="content")
+            div(data-role="ui-field-contain" style="border-bottom:none;")
+               label(for="brand") 车辆品牌
+               select#brand(name="brand" data-corners="false")
+               label(for="model") 车系
+               select#model(name="model" data-corners="false")
+               label(for="style") 车型
+               select#model(name="style" data-corners="false")
+               label(for="name") 姓名
+               input#name(name="name" data-corners="false" type="text" placeholder="请输入您的姓名")
+               label(for="code") 验证码
+               input#code(name="code" data-corners="false" type="text" placeholder="请输入您的验证码")
+               label(for="mail") 邮箱
+               input#mail(name="mail" data-corners="false" type="text" placeholder="请输入您的常用邮箱")
+            div(data-role="ui-field-contain" style="margin-top:45px;")
+               a.btn-primary(data-role="button"  data-corners="false") 马上预约
+         include include/footer.jade
+      div(data-role="page" id="subscribe-ok")
+         include include/header.jade
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 预约信息
+         div(data-role="content")
+            div(data-role="fieldcontain" style="border-bottom:none;")
+               div(style="border-bottom:1px solid #d4d3d8;")
+               div(style="border:1px solid #d4d3d8;background-color:#fff;margin-top: 20px;")
+         include include/footer.jade

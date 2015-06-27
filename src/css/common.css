@@ -1,0 +1,104 @@
+body{
+   background: #f1f2f6;
+   font-family: SimSun;
+}
+.ui-page-theme-a a.title{
+    color:#fff;
+    background:url('../img/title_bg.jpg') repeat-x;
+    margin:0;
+    height: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    padding-left: 0;
+    width:100%;
+    top:-1px;
+    font-size:20px;
+    border:none;
+}
+.input-text{
+    height:60px;
+}
+.ui-input-text{
+    margin-bottom: 15px;
+}
+.ui-page-theme-a .ui-btn.btn-primary{
+    background-color: #37bdd6;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color:#fff;
+    font-weight: normal;
+    font-size: 18px;
+}
+.btn-primary.ui-btn:active{
+    text-shadow: 0 1px 0 #f3f3f3;
+}
+.btn-primary.ui-btn:hover{
+    box-shadow: 0 0 12px #38c;
+}
+.ui-page-theme-a .ui-btn.btn-default{
+    background-color: #676767;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color:#fff;
+    font-weight: normal;
+    font-size: 18px;
+}
+.btn-default.ui-btn:active{
+    text-shadow: 0 1px 0 #f3f3f3;
+}
+.btn-default.ui-btn:hover{
+    box-shadow: 0 0 12px #38c;
+}
+.btn-blank.ui-btn:active{
+    text-shadow: 0 1px 0 #f3f3f3;
+}
+.btn-blank.ui-btn:hover{
+    box-shadow: 0 0 12px #38c;
+}
+.tips-container{
+    color: #a94442;
+    font-size: 14px;
+    margin: 5px 0;
+    display: none;
+}
+.title.ui-btn-icon-left:after{
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.address-name{
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 45px;
+}
+.address-tel{
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 5px;
+}
+.address-detail{
+    font-size: 14px;
+    color: #929292;
+}
+.ads-left {
+    width: 40%;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 15px;
+}
+.ads-right {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    color: #929292;
+}
+.text-right{
+    text-align: right;
+    color: #37bdd6;
+}
