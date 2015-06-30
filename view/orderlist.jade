@@ -15,27 +15,52 @@ html
               span(style="font-size:20px;margin-left:10px;display:inline-block;height:25px;line-height:25px;") 15618735062
             div(style="background: url('./img/order-bg.png') no-repeat left #fff;height:90px;margin-top:30px;border:1px solid #37bdd6;border-left:none;")
                div(style="margin:15px 15px;position:relative;")
-                  img(src="./img/box.png")
+                  div(style="height:60px;width:60px;float:left;")
+                     img(src="./img/box.png")
                   div(style="display:inline-block;height:60px;")
-                     p(style="margin:0;font-size:14px;color:#37bdd6;") 订单日期:
-                     p(style="margin:0;font-size:12px;") 订单编号:
-                     p(style="margin:0;font-size:12px;") 订单总价: 297元
-                  a(style="position:absolute;height: 30px;width: 74px;top:15px;right:0;display:block;background:url('./img/arrow-r.png') no-repeat right;" href="#order-info") 未付款
-      div(data-role="page" id="order-info")
+                     p(style="margin:0;font-size:14px;height:20px;line-height:20px;color:#37bdd6;") 订单日期:
+                     p(style="margin:0;font-size:12px;height:20px;line-height:20px;") 订单编号:
+                     p(style="margin:0;font-size:12px;height:20px;line-height:20px;") 订单总价: 297元
+                  a(style="position:absolute;height: 30px;line-height:30px;width: 74px;top:15px;right:0;display:block;text-decoration: none;color:red;background:url('./img/arrow-r.png') no-repeat right;" href="#orderdetail") 未付款
+      div(data-role="page" id="orderdetail")
          include include/header.jade
-         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 收货地址
+         a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 订单详情
          div(data-role="content")
-            div(data-role="ui-field-contain" style="border-bottom:none;")
-            label(for="name") 收件人
-            input#name(name="name" data-corners="false" type="text" placeholder="请输入收件人的姓名")
-            label(for="tel") 联系方式
-            input#code(name="tel" data-corners="false" type="text" placeholder="请输入收件人手机号")
-            label(for="address") 收货地址
-            select#province(name="province" data-corners="false")
-            select#city(name="city" data-corners="false")
-            select#county(name="county" data-corners="false")
-            textarea(rows="20" name="detail-address" id="detail-address" placeholder="请输入详细地址")
-            div(data-role="ui-field-contain" style="margin-top:30px;")
-               a.btn-primary(data-role="button"  data-corners="false") 保存
-
+            div(style="border-bottom:1px solid #dcdcdc;padding-bottom:10px;")
+               img(src="./img/user-info.png")
+               span(style="font-size:20px;margin-left:10px;display:inline-block;height:25px;line-height:25px;") 15618735062
+            div(style="background:#fff;")
+               div(style="border-bottom:1px solid #e0e0e0;margin:20px 15px 0;")
+                  div
+                    span.info-title 订单状态:
+                    span.info-content 待付款
+                  div
+                     span.info-title 商品总价:
+                     span.info-content 297元
+               div(style="border-bottom:1px solid #e0e0e0;margin:0 15px;")
+                  div
+                     span.info-title 订单日期:
+                     span.info-content 2015-6-22
+                  div
+                     span.info-title 订单编号:
+                     span.info-content 20150628****
+                  div
+                     span.info-title 车辆信息:
+                     span.info-content 雪佛兰 科鲁兹 2012
+                  div
+                     span.info-title 收货地址:
+                     span.info-content 上海市 上海市闸北区万荣路1188弄21号
+                  div
+                     span.info-title 收货人:
+                     span.info-content 张三 15618735062
+                  div
+                     span.info-title 支付方式:
+                     span.info-content 支付宝
+               div(style="margin:20px 15px 20px;")
+                  div(style="height:60px;width:60px;float:left;")
+                    img(src="./img/box.png")
+                  div(style="display:inline-block;height:40px;margin-top:10px;margin-bottom:30px;")
+                     p(style="margin:0;font-size:14px;color:#37bdd6;height:20px;line-height:20px;") 车挣盒子标准版
+                     p(style="margin:0;font-size:12px;height:20px;line-height:20px;") 价格:297元 数量:1
+            a.btn-primary(data-role="button"  data-corners="false") 立即支付
 

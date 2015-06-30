@@ -102,3 +102,48 @@ body{
     text-align: right;
     color: #37bdd6;
 }
+.info-title{
+    display: inline-block;
+    width:30%;
+    text-align: left;
+    height: 35px;
+    line-height: 35px;
+    color: #37bdd6;
+    font-size: 14px;
+}
+.info-content{
+    font-size: 14px;
+}
+.controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
+#login,#register,#resetpwd1,#resetpwd2,#resetpwd3{
+    font-size:14px;
+}
+.ui-field-contain>label {
+    float: left;
+    width: 20%;
+    margin: .5em 2% 0 0;
+}
+.ui-field-contain>label~[class*=ui-] {
+    float: left;
+    width: 78%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.address-arrow{
+    position:absolute;
+    height: 30px;
+    width: 24px;
+    top:5px;
+    right:0;
+    display:block;
+    background:url('../img/arrow-r.png') no-repeat right;
+}
+.address-list{
+    background:url('../img/ads_bg1.png') repeat-x #fff;
+    height:72px;
+    margin-top:10px;
+}

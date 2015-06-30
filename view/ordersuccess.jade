@@ -1,0 +1,29 @@
+doctype html
+html
+   head
+      title 预约成功
+      meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+      meta(name="viewport",content="width=device-width, initial-scale=1")
+      include include/loads.jade
+   body
+      div(data-role="page" id="ordersuccess")
+         include include/header.jade
+         a.title( data-corners="false" style="font-size: 20px;padding: .7em 0;display: block;position: relative;text-align: center;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;") 订单支付
+         div(data-role="content" style="padding:0;")
+            div(style="border-bottom:1px solid #dcdcdc;padding-bottom:10px;")
+               p(style="color:#37bdd6;font-size:20px;text-align:center;") 订单支付成功，请付款297元
+            div(style="background: url('./img/ads_bg2.png') repeat-x #fff;height:101px;margin-top:30px;")
+               p(style="margin:0;margin:0 15px;font-size:16px;height:30px;line-height:30px;color:#37bdd6;") 订单编号：201500000000000
+               p(style="margin:0;margin:0 15px;font-size:14px;height:25px;line-height:25px;color:#888888;") 配送地址：上海市 上海市闸北区万荣路1188弄G栋201室
+               p(style="margin:0;margin:0 15px;font-size:14px;height:25px;line-height:25px;color:#888888;") 付款成功后七天后发货
+            div(style="margin-top:30px;margin-bottom:10px;") 选择付费方式
+            div(style="background: #fff;height:50px;")
+               .info-title(style="height:50px;")
+                  img(src="./img/zhifubao.png" style="margin-top:20px;margin-left:15px;")
+               span(style="display:inline-block;line-height:50px;") 支付宝安全支付
+            div(style="background: #fff;height:50px;")
+               .info-title(style="height:50px;")
+                  img(src="./img/weixin.png" style="margin-top:10px;margin-left:15px;")
+               span(style="display:inline-block;line-height:50px;") 微信手机支付
+            a.btn-primary(data-role="button"  data-corners="false") 立即支付
+

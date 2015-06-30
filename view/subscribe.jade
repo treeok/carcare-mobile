@@ -10,27 +10,57 @@ html
          include include/header.jade
          a.title( data-corners="false" style="font-size: 18px;padding: .7em 1em;display: block;position: relative;text-align: center;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;") 客户预约
          div(data-role="content")
-            div(data-role="ui-field-contain" style="border-bottom:none;")
-               label(for="brand") 车辆品牌
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="brand" style="float: left;width: 20%;margin: .5em 2% 0 0;") 车辆品牌
                select#brand(name="brand" data-corners="false")
-               label(for="model") 车系
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="model" style="float: left;width: 20%;margin: .5em 2% 0 0;") 车系
                select#model(name="model" data-corners="false")
-               label(for="style") 车型
-               select#model(name="style" data-corners="false")
-               label(for="name") 姓名
-               input#name(name="name" data-corners="false" type="text" placeholder="请输入您的姓名")
-               label(for="code") 验证码
-               input#code(name="code" data-corners="false" type="text" placeholder="请输入您的验证码")
-               label(for="mail") 邮箱
-               input#mail(name="mail" data-corners="false" type="text" placeholder="请输入您的常用邮箱")
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="style" style="float: left;width: 20%;margin: .5em 2% 0 0;") 车型
+               select#style(name="style" data-corners="false")
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="name" style="float: left;width: 20%;margin: .5em 2% 0 0;") 姓名
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset(style="float: left;width: 77%;")
+                  input#name(name="name" data-corners="false" data-enhanced="true" type="text" placeholder="请输入姓名")
+               p.tips-container(style="margin-left:20%;text-indent:10px;") 姓名不能为空
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="code" style="float: left;width: 20%;margin: .5em 2% 0 0;") 验证码
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset(style="float: left;width: 42%;")
+                  input#code(name="code" data-corners="false" data-enhanced="true" type="text" placeholder="请输入验证码")
+               div(style="width:35%;float:left;height:37px;vertical-align:middle;")
+                  img#code-img(src="http://10.8.6.35:8080/mobile/code.html" style="margin-top: 9px;height: 37px;")
+            p.tips-container(style="margin-left:20%;text-indent:10px;text-align:left;") 验证码不能为空
+            p.tips-container(style="margin-left:20%;text-indent:10px;text-align:left;") 验证码不正确
+            div(data-role="ui-field-contain" style="border-bottom:none;margin-bottom:20px;clear:both;")
+               label(for="mail" style="float: left;width: 20%;margin: .5em 2% 0 0;") 邮箱
+               div.ui-input-text.ui-body-inherit.ui-shadow-inset(style="float: left;width: 77%;")
+                  input#mail(name="mail" data-corners="false" data-enhanced="true" type="email" placeholder="请输入常用邮箱")
+               p.tips-container(style="margin-left:20%;text-indent:10px;") 邮箱不能为空
+               p.tips-container(style="margin-left:20%;") 邮箱格式不正确
             div(data-role="ui-field-contain" style="margin-top:45px;")
-               a.btn-primary(data-role="button"  data-corners="false") 马上预约
+               a#subscribe-btn.btn-primary(data-role="button"  data-corners="false") 马上预约
          include include/footer.jade
       div(data-role="page" id="subscribe-ok")
          include include/header.jade
          a.title.title-arrow(data-role="button" data-corners="false" data-rel="back" data-icon="back" data-iconpos="left") 预约信息
          div(data-role="content")
-            div(data-role="fieldcontain" style="border-bottom:none;")
-               div(style="border-bottom:1px solid #d4d3d8;")
-               div(style="border:1px solid #d4d3d8;background-color:#fff;margin-top: 20px;")
+            div(style="border-bottom:1px solid #dcdcdc;padding-bottom:10px;")
+               img(src="./img/user-info.png")
+               span(style="font-size:20px;margin-left:10px;display:inline-block;height:25px;line-height:25px;") 15618735062
+            div(style="background:#fff;")
+               div(style="border-bottom:1px solid #e0e0e0;margin:20px 15px 0;")
+                  div
+                     span.info-title 预约信息:
+                     span.info-content(style="color:#37bdd6;") 已提交
+               div(style="margin:0 15px;")
+                  div
+                     span.info-title 车辆信息:
+                     span#subscribe-car.info-content 雪佛兰 *******************
+                  div
+                     span.info-title 客户姓名:
+                     span#subscribe-name.info-content 张三
+                  div
+                     span.info-title 邮箱:
+                     span#subscribe-mail.info-content 张三@163.com
          include include/footer.jade

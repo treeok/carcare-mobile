@@ -3,6 +3,16 @@
  */
 define(function(){
     var utils = {
+        ajaxGet:function(url,param,cb){
+            if(typeof param !== 'object'){
+                cb = param;
+                param = null;
+            }
+            $.get(url,param,function(data){
+                cb&&cb(data);
+
+            });
+        },
         ajaxJson:function(url,param,cb,errCb){
             $.ajax({
                 type: 'post',
@@ -17,7 +27,7 @@ define(function(){
             var reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
             return str.match(reg);
         },
-        psdRegx:function(str){
+        pwdRegx:function(str){
             var reg = /((?=.*\d)(?=.*\D)|(?=.*[a-zA-Z])(?=.*[^a-zA-Z]))^.{8,16}$/;
             return str.match(reg);
         },

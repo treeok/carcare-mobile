@@ -16,6 +16,21 @@ define(['widget/utils'],function(Utils){
                     Login.init();
                 });
             }
+            if(docName == 'choicecar'){
+                require(['include/choicecar'],function(Choicecar){
+                    Choicecar.init();
+                });
+            }
+            if(docName == 'orderinfo'){
+                require(['include/orderinfo'],function(Orderinfo){
+                    Orderinfo.init();
+                });
+            }
+            if(docName == 'subscribe'){
+                require(['include/subscribe'],function(Subscribe){
+                    Subscribe.init();
+                });
+            }
         },
         menuDisplay:function(){
             $('#menu-list').toggle();
