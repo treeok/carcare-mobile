@@ -26,9 +26,29 @@ define(['widget/utils'],function(Utils){
                     Orderinfo.init();
                 });
             }
+            if(docName == 'address'){
+                require(['include/address'],function(Address){
+                    Address.init();
+                });
+            }
+            if(docName == 'modifyaddress'){
+                require(['include/modifyaddress'],function(Modifyaddress){
+                    Modifyaddress.init();
+                });
+            }
             if(docName == 'subscribe'){
                 require(['include/subscribe'],function(Subscribe){
                     Subscribe.init();
+                });
+            }
+            if(docName == 'orderlist'){
+                require(['include/orderlist'],function(Orderlist){
+                    Orderlist.init();
+                });
+            }
+            if(docName == 'ordersuccess'){
+                require(['include/ordersuccess'],function(Ordersuccess){
+                    Ordersuccess.init();
                 });
             }
         },
