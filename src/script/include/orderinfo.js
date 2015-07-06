@@ -18,13 +18,13 @@ define(['widget/utils'],function(Utils){
                 if(data != ''){
                     container.append('<div style="margin:0 15px;position:relative;top:12px;">'+
                     '<p style="margin:0 0 5px;"><img src="./img/user-ads.png"><span class="address-name">'+ data[0].name+'</span><img src="./img/tel.png"><span class="address-tel">'+ data[0].mobile+'</span></p>'+
-                    '<p style="margin:0;" class="address-detail"><span class="address-province" data-value="'+data[0].provinceId+'">'+ data[0].province +'</span><span class="address-city" data-value="'+data[0].cityId+'">'+  data[0].city+'</span><span class="address-district" data-value="'+data[0].districtId+'">'+  data[0].district+'</span><span class="address-street">'+ data[0].street+'</span></p><a class="address-arrow" class="ui-link"></a>'+
+                    '<p style="margin:0 10px 0 0;" class="address-detail"><span class="address-province" data-value="'+data[0].provinceId+'">'+ data[0].province +'</span><span class="address-city" data-value="'+data[0].cityId+'">'+  data[0].city+'</span><span class="address-district" data-value="'+data[0].districtId+'">'+  data[0].district+'</span><span class="address-street">'+ data[0].street+'</span></p><a class="address-arrow" class="ui-link"></a>'+
                     '</div>');
                 }else{
                     container.append('<div style="margin:0 15px;position:relative;top:15px;"><a class="address-arrow" class="ui-link"></a></div>');
                 }
                 container.find('a').click(function(){
-                    window.location.href = 'address.html';
+                    window.location.href = baseUrl1+'address.html';
                 });
             });
         },
@@ -57,7 +57,7 @@ define(['widget/utils'],function(Utils){
                             'mobile': $('.address-tel').text(),
                             'name': $('.address-name').text(),
                             'paymentType': 1,
-                            'tradeItem': data.id+':'+ 1,
+                            'tradeItem': data.id+':'+ 1+';1:1',
                             'styleId':styleId,
                             'source':2
                         };
@@ -66,9 +66,9 @@ define(['widget/utils'],function(Utils){
                             data = JSON.parse(data);
                             if(data.errFlag == 0){
                                 alert('下单成功！');
-                                window.location.href = 'ordersuccess.html?code='+data.errMsg;
+                                window.location.href = baseUrl1+'/order/ordersuccess.html?code='+data.errMsg;
                             }else{
-                                alert('下单失败！');
+                                alert('库存不足！');
                             }
                         });
                     });

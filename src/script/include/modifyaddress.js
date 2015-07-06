@@ -69,18 +69,28 @@ define(['widget/utils'],function(Utils){
                     name.parent().css('box-shadow','0 0 12px #a94442');
                     return false;
                 }
+                if(name.val().length > 20){
+                    name.parent().parent().find('p').eq(1).show();
+                    name.parent().css('box-shadow','0 0 12px #a94442');
+                    return false;
+                }
                 if(tel.val() == ''){
-                    tel.parent().parent().find('p').eq(1).show();
+                    tel.closest('.ui-content').find('p').eq(2).show();
                     tel.parent().css('box-shadow','0 0 12px #a94442');
                     return false;
                 }
                 if(!Utils.telRegx(tel.val())){
-                    tel.parent().parent().find('p').eq(2).show();
+                    tel.closest('.ui-content').find('p').eq(3).show();
                     tel.parent().css('box-shadow','0 0 12px #a94442');
                     return false;
                 }
                 if(street.val() == ''){
-                    street.parent().parent().find('p').eq(3).show();
+                    street.closest('.ui-content').find('p').eq(4).show();
+                    street.parent().css('box-shadow','0 0 12px #a94442');
+                    return false;
+                }
+                if(street.val().length > 50){
+                    street.parent().parent().find('p').eq(5).show();
                     street.parent().css('box-shadow','0 0 12px #a94442');
                     return false;
                 }
@@ -179,18 +189,28 @@ define(['widget/utils'],function(Utils){
                         name.parent().css('box-shadow','0 0 12px #a94442');
                         return false;
                     }
+                    if(name.val().length > 20){
+                        name.parent().parent().find('p').eq(1).show();
+                        name.parent().css('box-shadow','0 0 12px #a94442');
+                        return false;
+                    }
                     if(tel.val() == ''){
-                        tel.parent().parent().find('p').eq(1).show();
+                        tel.closest('.ui-content').find('p').eq(2).show();
                         tel.parent().css('box-shadow','0 0 12px #a94442');
                         return false;
                     }
                     if(!Utils.telRegx(tel.val())){
-                        tel.parent().parent().find('p').eq(2).show();
+                        tel.closest('.ui-content').find('p').eq(3).show();
                         tel.parent().css('box-shadow','0 0 12px #a94442');
                         return false;
                     }
                     if(street.val() == ''){
-                        street.parent().parent().find('p').eq(3).show();
+                        street.closest('.ui-content').find('p').eq(4).show();
+                        street.parent().css('box-shadow','0 0 12px #a94442');
+                        return false;
+                    }
+                    if(street.val().length > 50){
+                        street.parent().parent().find('p').eq(5).show();
                         street.parent().css('box-shadow','0 0 12px #a94442');
                         return false;
                     }

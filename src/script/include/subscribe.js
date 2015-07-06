@@ -141,7 +141,7 @@ define(['widget/utils'],function(Utils){
             Utils.ajaxJson(url,params,function(data){
                 data = JSON.parse(data);
                 if(data.errFlag == 1){
-                    $('#subscribe-btn').attr('href','#subscribe-ok');
+                    window.location.href = baseUrl1+'/subscribe/subscribe.html#subscribe-ok';
                     $('#subscribe-car').text($('#brand').val()+''+$('#model').val()+''+$('#style').val());
                     $('#subscribe-name').text(name.val());
                     $('#subscribe-mail').text(mail.val());

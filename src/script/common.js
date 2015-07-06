@@ -7,10 +7,17 @@ define(['widget/utils'],function(Utils){
             var _that = this;
             this.menuEvent();
             this.getScript();
+            $('#install-content').find('img').width(document.body.scrollWidth);
         },
         getScript:function(){
             var urlArray = document.URL.split('/'),
                 docName = urlArray[urlArray.length - 1].split('.')[0];
+
+            if(docName == 'index' || docName == ''){
+                require(['include/index'],function(Index){
+                    Index.init();
+                });
+            }
             if(docName == 'login'){
                 require(['include/login'],function(Login){
                     Login.init();
@@ -51,6 +58,16 @@ define(['widget/utils'],function(Utils){
                     Ordersuccess.init();
                 });
             }
+            if(docName == 'carlist'){
+                require(['include/carlist'],function(Carlist){
+                    Carlist.init();
+                });
+            }
+            if(docName == 'detail'){
+                require(['include/detail'],function(Detail){
+                    Detail.init();
+                });
+            }
         },
         menuDisplay:function(){
             $('#menu-list').toggle();
@@ -60,7 +77,6 @@ define(['widget/utils'],function(Utils){
             $('#menu').on('tap',function(){
                 _that.menuDisplay();
             });
-
         }
     };
 
