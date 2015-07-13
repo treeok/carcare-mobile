@@ -2,7 +2,7 @@
  * Created by claire on 2015/6/25.
  */
 var static_domain = 'http://localhost:63342/carcare-mobile/public';
-var baseUrl1 = 'http://10.8.6.30:8088/mobile';
+var baseUrl1 = 'http://10.8.6.38:8088/mobile';
 require.config({
     shim: {
         'jquery.mobile-min': {

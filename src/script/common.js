@@ -23,6 +23,16 @@ define(['widget/utils'],function(Utils){
                     Login.init();
                 });
             }
+            if(docName == 'register'){
+                require(['include/register'],function(Register){
+                    Register.init();
+                });
+            }
+            if(docName == 'resetpwd' || docName == 'resetpwd2' || docName == 'resetpwd3'){
+                require(['include/resetpwd'],function(Resetpwd){
+                    Resetpwd.init();
+                });
+            }
             if(docName == 'choicecar'){
                 require(['include/choicecar'],function(Choicecar){
                     Choicecar.init();
@@ -58,6 +68,11 @@ define(['widget/utils'],function(Utils){
                     Ordersuccess.init();
                 });
             }
+            if(docName == 'paysuccess' || docName == 'pay_return'){
+                require(['include/paysuccess'],function(Paysuccess){
+                    Paysuccess.init();
+                });
+            }
             if(docName == 'carlist'){
                 require(['include/carlist'],function(Carlist){
                     Carlist.init();
@@ -71,12 +86,14 @@ define(['widget/utils'],function(Utils){
         },
         menuDisplay:function(){
             $('#menu-list').toggle();
+            return false;
         },
         menuEvent:function(){
             var _that = this;
-            $('#menu').on('tap',function(){
+            $('#menu').click(function(){
                 _that.menuDisplay();
             });
+
         }
     };
 
