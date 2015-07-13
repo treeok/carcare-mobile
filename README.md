@@ -5,9 +5,9 @@
 <h2>目录：</h2>
 
 <p>carcare-mobile //使用jqm 开发的carcare移动端官网</P>
-<p>--src   //静态资源</P>
-<p>----css </P>
-<p>----img</P>
+<p>|--src   //静态资源</P>
+<p>|----css </P>
+<p>|----img</P>
 <p>----lib</P>
 <p>----script</P>
 <p>------include  // 页面JS对象，对各个属性和方法的封装</P>
